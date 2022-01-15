@@ -1,0 +1,31 @@
+{
+  "name": "backend-fast-connect",
+  "version": "1.0.0",
+  "description": "backend de chat de conversa",
+  "main": "src/index.ts",
+  "author": "Daniel G. Guerra",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "migration": "typeorm migration:create -n "
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@typescript-eslint/eslint-plugin": "^5.9.1",
+    "@typescript-eslint/parser": "^5.9.1",
+    "eslint": "^8.6.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^3.3.3"
+  },
+  "dependencies": {
+    "dotenv": "^11.0.0",
+    "express": "^4.17.2",
+    "express-async-errors": "^3.1.1",
+    "mongodb": "3",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.2.41",
+    "uuid": "^8.3.2"
+  }
+}
