@@ -6,25 +6,26 @@ export class User {
     @ObjectIdColumn()
     _id: ObjectID;
 
-    @Column({nullable: false, default: true})
+    @Column({ default: true })
     isActive: boolean;
 
-    @Column({nullable: false})
+    @Column()
     name: string;
 
-    @Column({nullable: false})
+    @Column()
     email: string;
 
-    @Column({nullable: false})
+    @Column()
     password: string;
 
-    @Column({nullable: false, default: new Date()})
+    @Column()
+
+    @Column()
     birthDate: Date;
 
-    @CreateDateColumn({nullable: false, default: new Date()})
+    @CreateDateColumn()
     createAt: Date;
 
-    @UpdateDateColumn({ nullable: false })
+    @UpdateDateColumn()
     updateAt: Date;
-
 }

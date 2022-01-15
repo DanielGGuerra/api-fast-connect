@@ -12,6 +12,7 @@ export class CreateUserService {
         const usersRepositories = getMongoRepository(User);
 
         const user = usersRepositories.create({
+            isActive: true,
             name,
             email,
             password
