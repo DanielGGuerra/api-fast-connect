@@ -1,6 +1,6 @@
 import { Column, CreateDateColumn, Entity, ObjectID, ObjectIdColumn, UpdateDateColumn } from "typeorm";
 
-@Entity({ database: "app_db", "name": "users" })
+@Entity({ database: "app_db", name: "users" })
 export class User {
 
     @ObjectIdColumn()
@@ -17,8 +17,6 @@ export class User {
 
     @Column()
     password: string;
-
-    @Column()
 
     @Column()
     birthDate: Date;

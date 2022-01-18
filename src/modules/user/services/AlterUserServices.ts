@@ -1,7 +1,9 @@
 import { ObjectID } from "mongodb";
 import { getRepository } from "typeorm";
 import CustomError from "../../error/RequestError";
+import CtyptCode from "../../services/CryptCode";
 import { User } from "../entities/User";
+
 
 interface IUser {
     _id: string;
@@ -23,6 +25,11 @@ export default class AlterUserServices {
                 name: "AlterUser",
                 message: "User ID not informed"
             });
+        }
+
+        if(userParams.password) {
+            const encode = new CtyptCode();
+            userParams.password = await encode.encode(userParams.password);
         }
 
         const user = await userRepository.findOne({

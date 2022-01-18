@@ -1,5 +1,5 @@
-import "express-async-errors"
-import "reflect-metadata"
+import "express-async-errors";
+import "reflect-metadata";
 import * as express from "express";
 import { config } from 'dotenv';
 import { createConnection } from 'typeorm';
@@ -7,6 +7,7 @@ import { router } from "./router";
 import errorMiddleware from "./modules/middlewares/ErrorMiddleware";
 
 config()
+
 
 createConnection().then(_ => {
     const server = express();
