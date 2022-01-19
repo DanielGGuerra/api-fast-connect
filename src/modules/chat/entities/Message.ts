@@ -1,16 +1,13 @@
-import { Column, CreateDateColumn, Entity, ObjectID, ObjectIdColumn } from "typeorm";
+import { ObjectID } from "mongodb";
 
-@Entity()
 export class Message {
-    @ObjectIdColumn()
-    _id: ObjectID;
-
-    @Column({ nullable: false })
     idUser: ObjectID;
-
-    @Column({ nullable: false })
     content: string;
-
-    @CreateDateColumn({ default: new Date() })
     createAt: Date;
+
+    constructor(id, content) {
+        this.idUser = id;
+        this.content = content;
+        this.createAt = new Date();
+    }
 }

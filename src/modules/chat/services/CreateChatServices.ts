@@ -1,4 +1,4 @@
-import { getRepository, In } from "typeorm"
+import { getRepository } from "typeorm"
 import { ObjectID } from "mongodb";
 import CustomError from "../../error/RequestError";
 import { User } from "../../user/entities/User"
