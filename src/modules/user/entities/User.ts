@@ -1,4 +1,5 @@
 import { Column, CreateDateColumn, Entity, ObjectID, ObjectIdColumn, UpdateDateColumn } from "typeorm";
+import { Avatar } from "./Avatar";
 
 @Entity({ database: "app_db", name: "users" })
 export class User {
@@ -20,6 +21,9 @@ export class User {
 
     @Column()
     birthDate: Date;
+
+    @Column()
+    avatar: Avatar;
 
     @CreateDateColumn()
     createAt: Date;

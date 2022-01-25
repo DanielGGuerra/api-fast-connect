@@ -12,9 +12,9 @@ config()
 createConnection().then(_ => {
     const server = express();
 
-    server.use(express.json())
-    server.use(router)
-    server.use(errorMiddleware)
+    server.use(express.json());
+    server.use(router);
+    server.use(errorMiddleware);
 
     server.listen(3000, () => console.log("Server online - port 3000"))
 })
